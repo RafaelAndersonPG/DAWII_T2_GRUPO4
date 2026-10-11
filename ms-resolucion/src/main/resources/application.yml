@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ms-resolucion
+
+server:
+  port: 8088
+  error:
+    include-message: always
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8762/eureka/
+  instance:
+    prefer-ip-address: true
