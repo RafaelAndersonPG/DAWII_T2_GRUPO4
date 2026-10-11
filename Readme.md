@@ -6,8 +6,7 @@ Sistema de microservicios desarrollado con **Spring Boot** y **Spring Cloud** pa
 
 ## 🏗️ Arquitectura y Componentes
 
-El sistema se compone de 3 microservicios independientes que se comunican y registran mediante un servidor de descubrimiento:
-
+El sistema se compone de 3 microservicios independientes que se comunican y registran mediante un servidor de descubrimiento, utilizando una base de datos MySQL en el puerto 3306 con credenciales root / mysql:
 1. **`eureka-server`** (Puerto: `8762`): Servidor de descubrimiento Netflix Eureka.
 2. **`ms-reclamos`** (Puerto: `8081`): Microservicio encargado del registro, consulta y actualización de reclamos (conectado a MySQL).
 3. **`ms-resolucion`** (Puerto: `8088`): Microservicio encargado de completar el proceso de resolución de reclamos, validando la existencia mediante **Spring Cloud OpenFeign** contra `ms-reclamos`.
