@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/resoluciones")
+@RequestMapping("/api/resoluciones")
 public class ResolucionController {
 
 	private final ResolucionService resolucionService;

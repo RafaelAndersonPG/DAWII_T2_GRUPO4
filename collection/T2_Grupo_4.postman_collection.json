@@ -1,0 +1,942 @@
+{
+  "info": {
+    "_postman_id": "8d80314b-115f-4724-a15a-901f03441c6c",
+    "name": "T2_Grupo_4",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36194657"
+  },
+  "item": [
+    {
+      "name": "ms reclamo",
+      "item": [
+        {
+          "name": "Registrar reclamo 1",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nomcliente\": \"Daniel Mendivil\",\r\n    \"ultimos4tarjeta\": \"4321\",\r\n    \"motivo\": \"Consumo no reconocido en supermercado\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/reclamos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "reclamos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ejemplo",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nomcliente\": \"Daniel Mendivil\",\r\n    \"ultimos4tarjeta\": \"4321\",\r\n    \"motivo\": \"Consumo no reconocido en supermercado\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/reclamos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "reclamos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 03:29:38 GMT"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"numreclamo\": 1,\n  \"fechareclamo\": \"2026-10-10\",\n  \"nomcliente\": \"Daniel Mendivil\",\n  \"ultimos4tarjeta\": \"4321\",\n  \"motivo\": \"Consumo no reconocido en supermercado\",\n  \"nombreAnalista\": \"No asignado\",\n  \"estado\": 1,\n  \"observacion\": \"por evaluar\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Registrar reclamo 2",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nomcliente\": \"Hector Blas\",\r\n    \"ultimos4tarjeta\": \"1010\",\r\n    \"motivo\": \"Cobro duplicado\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/reclamos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "reclamos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ejemplo",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nomcliente\": \"Hector Blas\",\r\n    \"ultimos4tarjeta\": \"1010\",\r\n    \"motivo\": \"Cobro duplicado\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/reclamos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "reclamos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 03:30:08 GMT"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"numreclamo\": 2,\n  \"fechareclamo\": \"2026-10-10\",\n  \"nomcliente\": \"Hector Blas\",\n  \"ultimos4tarjeta\": \"1010\",\n  \"motivo\": \"Cobro duplicado\",\n  \"nombreAnalista\": \"No asignado\",\n  \"estado\": 1,\n  \"observacion\": \"por evaluar\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Consulta por número de reclamo (1)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/reclamos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "reclamos",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ejemplo",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/reclamos/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "reclamos",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 03:30:45 GMT"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"numreclamo\": 1,\n  \"fechareclamo\": \"2026-10-10\",\n  \"nomcliente\": \"Daniel Mendivil\",\n  \"ultimos4tarjeta\": \"4321\",\n  \"motivo\": \"Consumo no reconocido en supermercado\",\n  \"nombreAnalista\": \"No asignado\",\n  \"estado\": 1,\n  \"observacion\": \"por evaluar\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Consulta por número de reclamo (2)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/reclamos/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "reclamos",
+                "2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ejemplo",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/reclamos/2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "reclamos",
+                    "2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 03:31:08 GMT"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"numreclamo\": 2,\n  \"fechareclamo\": \"2026-10-10\",\n  \"nomcliente\": \"Hector Blas\",\n  \"ultimos4tarjeta\": \"1010\",\n  \"motivo\": \"Cobro duplicado\",\n  \"nombreAnalista\": \"No asignado\",\n  \"estado\": 1,\n  \"observacion\": \"por evaluar\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Actualizar reclamo 1",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombreAnalista\": \"Carlos Perez\",\r\n    \"estado\": 2,\r\n    \"observacion\": \"Reclamo procedente\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/reclamos/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "reclamos",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ejemplo",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombreAnalista\": \"Carlos Perez\",\r\n    \"estado\": 2,\r\n    \"observacion\": \"Reclamo procedente\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/reclamos/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "reclamos",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 03:31:23 GMT"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"numreclamo\": 1,\n  \"fechareclamo\": \"2026-10-10\",\n  \"nomcliente\": \"Daniel Mendivil\",\n  \"ultimos4tarjeta\": \"4321\",\n  \"motivo\": \"Consumo no reconocido en supermercado\",\n  \"nombreAnalista\": \"Carlos Perez\",\n  \"estado\": 2,\n  \"observacion\": \"Reclamo procedente\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Error - Registrar reclamo 1",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nomcliente\": \"Daniel Mendivil\",\r\n    \"ultimos4tarjeta\": \"4325\",\r\n    \"motivo\": \"\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/reclamos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8081",
+              "path": [
+                "api",
+                "reclamos"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Nombre de cliente vacio",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nomcliente\": \"Daniel Mendivil\",\r\n    \"ultimos4tarjeta\": \"4321\",\r\n    \"motivo\": \"Consumo no reconocido en supermercado\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/reclamos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "reclamos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 04:20:21 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"timestamp\": \"2026-10-11T04:20:21.035+00:00\",\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"El nombre del cliente no puede estar vacío\",\n  \"path\": \"/api/reclamos\"\n}"
+            },
+            {
+              "name": "Número de dígitos de tarjeta erróneos",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nomcliente\": \"Daniel Mendivil\",\r\n    \"ultimos4tarjeta\": \"432\",\r\n    \"motivo\": \"Consumo no reconocido en supermercado\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/reclamos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "reclamos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 04:21:09 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"timestamp\": \"2026-10-11T04:21:09.580+00:00\",\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Los últimos 4 dígitos de la tarjeta son obligatorios y deben ser numéricos\",\n  \"path\": \"/api/reclamos\"\n}"
+            },
+            {
+              "name": "Motivo vacio",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nomcliente\": \"Daniel Mendivil\",\r\n    \"ultimos4tarjeta\": \"4325\",\r\n    \"motivo\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/reclamos",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8081",
+                  "path": [
+                    "api",
+                    "reclamos"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 04:22:56 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"timestamp\": \"2026-10-11T04:22:56.273+00:00\",\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"El motivo no puede estar vacío\",\n  \"path\": \"/api/reclamos\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ms resolucion",
+      "item": [
+        {
+          "name": "Resolver reclamo N° 1 (Procedente)",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombreAnalista\": \"Carlos Perez\",\r\n    \"estado\": 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/api/resoluciones/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "api",
+                "resoluciones",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ejemplo",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombreAnalista\": \"Carlos Perez\",\r\n    \"estado\": 2\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8088/api/resoluciones/1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8088",
+                  "path": [
+                    "api",
+                    "resoluciones",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 03:49:01 GMT"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"mensaje\": \"Reclamo 1 resuelto como PROCEDENTE\",\n  \"reclamo\": {\n    \"numreclamo\": 1,\n    \"fechareclamo\": \"2026-10-10\",\n    \"nomcliente\": \"Daniel Mendivil\",\n    \"ultimos4tarjeta\": \"4321\",\n    \"motivo\": \"Consumo no reconocido en supermercado\",\n    \"nombreAnalista\": \"Carlos Perez\",\n    \"estado\": 2,\n    \"observacion\": \"Reclamo procedente: se devolvera el monto del consumo no reconocido\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Resolver reclamo N°2 (Improcedente)",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombreAnalista\": \"Freddy Marquez\",\r\n    \"estado\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/api/resoluciones/2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "api",
+                "resoluciones",
+                "2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ejemplo",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombreAnalista\": \"Freddy Marquez\",\r\n    \"estado\": 3\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8088/api/resoluciones/2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8088",
+                  "path": [
+                    "api",
+                    "resoluciones",
+                    "2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 03:49:41 GMT"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"mensaje\": \"Reclamo 2 resuelto como IMPROCEDENTE\",\n  \"reclamo\": {\n    \"numreclamo\": 2,\n    \"fechareclamo\": \"2026-10-10\",\n    \"nomcliente\": \"Hector Blas\",\n    \"ultimos4tarjeta\": \"1010\",\n    \"motivo\": \"Cobro duplicado\",\n    \"nombreAnalista\": \"Freddy Marquez\",\n    \"estado\": 3,\n    \"observacion\": \"Reclamo improcedente: el consumo fue validado como realizado por el titular\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Error - Reclamo no existe",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombreAnalista\": \"Freddy Marquez\",\r\n    \"estado\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/api/resoluciones/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "api",
+                "resoluciones",
+                "3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ejemplo",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombreAnalista\": \"Freddy Marquez\",\r\n    \"estado\": 3\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8088/api/resoluciones/3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8088",
+                  "path": [
+                    "api",
+                    "resoluciones",
+                    "3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 03:52:31 GMT"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"timestamp\": \"2026-10-11T03:52:31.708+00:00\",\n  \"status\": 404,\n  \"error\": \"Not Found\",\n  \"message\": \"El reclamo 3 no existe\",\n  \"path\": \"/api/resoluciones/3\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Error - Estado no válido",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombreAnalista\": \"Freddy Marquez\",\r\n    \"estado\": 4\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/api/resoluciones/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "path": [
+                "api",
+                "resoluciones",
+                "3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "ejemplo",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"nombreAnalista\": \"Freddy Marquez\",\r\n    \"estado\": 4\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8088/api/resoluciones/3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8088",
+                  "path": [
+                    "api",
+                    "resoluciones",
+                    "3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "content-type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "date",
+                  "value": "Sun, 11 Oct 2026 03:53:02 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "close"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"timestamp\": \"2026-10-11T03:53:02.819+00:00\",\n  \"status\": 400,\n  \"error\": \"Bad Request\",\n  \"message\": \"Estado no valido. Use 2 (procedente) o 3 (improcedente)\",\n  \"path\": \"/api/resoluciones/3\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
